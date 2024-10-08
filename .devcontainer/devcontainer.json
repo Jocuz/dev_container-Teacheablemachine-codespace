@@ -1,0 +1,23 @@
+{
+  "name": "Teachable Machine Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",  // Referencia al Dockerfile, si lo usas
+    "context": "."
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",   // Extensión para linting
+    "esbenp.prettier-vscode"    // Extensión para formateo automático
+  ],
+  "postCreateCommand": "npm install",  // Ejecuta la instalación de dependencias después de crear el contenedor
+  "portsAttributes": {
+    "3000": {
+      "label": "Web App",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "forwardPorts": [3000],  // Abre el puerto 3000 para la aplicación web
+  "remoteUser": "node"  // Ejecuta el contenedor con el usuario 'node'
+}
