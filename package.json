@@ -1,0 +1,14 @@
+{
+  "name": "teachable-machine-dev-container",
+  "version": "1.0.0",
+  "description": "Dev container para trabajar con TensorFlow.js y modelos de Teachable Machine",
+  "main": "index.js",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.0.0"  // TensorFlow.js para ejecutar modelos de Teachable Machine
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
